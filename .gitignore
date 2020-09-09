@@ -1,3 +1,5 @@
 target
+.gitignore
+Cargo.lock
 main.exe
 cargo-edit
