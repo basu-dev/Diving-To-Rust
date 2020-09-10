@@ -3,7 +3,9 @@ pub fn run(){
     //integers are of many types like u8, u32 , u64, etc and same for i like i8 ....
 
     let  id:u8;
-    id=8;
+    id=244;
+    println!("Number of bytes occupied in u8 is {}",std::mem::size_of_val(&id) );
+    println!("{}",2^8 );
     //float
     let myfload:f64=1.34;
     println!("{} {}",id,myfload );
@@ -47,6 +49,8 @@ pub fn run(){
     let lst=vec!["Name"];
     let res=names.push("Jane");
     println!("{:?} , {:?} {:?}",_vec, names, res);
+
+    
 
 
 }
