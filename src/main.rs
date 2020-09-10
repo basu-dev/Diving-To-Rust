@@ -1,12 +1,14 @@
-// mod print;
-// mod vars;
+mod print;
+mod vars;
 mod datatypes;
-// mod function;
+mod function;
 mod structs;
+mod conditionals;
 fn main(){
     // print::print();
     // vars::vars();
     // datatypes::run();
     // function::run();
-    structs::run();
+    // structs::run();
+    conditionals::run();
 }

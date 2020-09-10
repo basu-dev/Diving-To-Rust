@@ -8,8 +8,11 @@ pub fn run(){
         a+b
     }
     // closure
+    //closures have access to variables of outer scope
     let multiple=|a:u32,b:u32|{println!("{}",a*b*z )};
+
+
     multiple(2,3);
-    let cat=sum(a,z);
-    println!("{}",cat );
+    let sm=sum(a,z);
+    println!("Sum of {} and {} is {}",a,z,sm );
 }

@@ -1,5 +1,8 @@
 
 pub fn run(){
+
+    //numbers , string , array , tuple are primitive data types
+    //vector is not primitive if I am not wrong.. I m not so sure about all these..
     //integers are of many types like u8, u32 , u64, etc and same for i like i8 ....
 
     let  id:u8;
@@ -49,6 +52,9 @@ pub fn run(){
     let lst=vec!["Name"];
     let res=names.push("Jane");
     println!("{:?} , {:?} {:?}",_vec, names, res);
+    //if types not defined it uses default type
+    //for eg.. let a=8; uses default let a:i32=8;
+
 
     
 
