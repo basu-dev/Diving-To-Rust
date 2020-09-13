@@ -34,7 +34,7 @@ pub fn run(){
          
         }
     }
-    fn checkStr(st:&str){
+    fn check_str(st:&str){
         match st{
             "Basu"=>println!("{}","Basu" ),
             "Dev"=>println!("{}","Dev" ),
@@ -42,5 +42,5 @@ pub fn run(){
         }
     }
     check(Coins::Penny);
-    checkStr("Basu");
+    check_str("Basu");
 }
