@@ -14,7 +14,7 @@ fn main(){
     // function::run();
     // structs::run();
     // conditionals::run();
-    pointer::run();
-    // cli::run();
+    // pointer::run();
+    cli::run();
 
 }
