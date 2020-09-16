@@ -37,29 +37,43 @@ pub fn run(){
 		)
 
 	];
-	println!("..............Quiz Game................");
+	println!("================ Quiz Game =============");
 	static mut num:i8=4;
+	static mut score: u8 = 0;
 	fn quiz(questions:Vec<Question>){
 		unsafe {num-=1};
-		 if num <0 {
-			println!("{:?}","The score is 4" )
+		let mut terminate=false;
+		 unsafe {if num <1 {
+		 	terminate=true;
+			// println!("{:?}","The score is 4" )
 		}
-	
+	}
 		let mut input=String::new();
 		let index=rand::thread_rng()
 		.gen_range(0,questions.len()) as usize;
 		let question=&questions[index];
 		println!("{}",questions[index].question);
 		for i in 0..question.options.len() as usize{
-			println!(" {}: {}",i,question.options[i]);
+			println!(" {}: {}",i+1,question.options[i]);
 		}
 		std::io::stdin()
 			.read_line(&mut input)
 			.expect("Invalid Input");
-		let input:u8=input.trim().parse().expect("Not a number");
-		println!("{:?}",input );
-		quiz(questions)
-	}
+		let input:usize=input.trim().parse().expect("Not a number");
+		if question.options[input - 1]==question.answer{
+			unsafe {score+=1}
+		}
+		if terminate{
+			// quiz(questions)
+			println!("=============== Game Over ===============" );
+			unsafe{println!("              The score is {}", score );};
+			println!("=========The Correct Answers Are=========");
 
+
+		}
+		else {
+			quiz(questions)
+		}
+	}
 	quiz(questions);
 }
