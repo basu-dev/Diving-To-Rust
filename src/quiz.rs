@@ -1,4 +1,5 @@
 use rand::Rng;
+use std::io;
 pub fn run(){
 	#[derive(Debug)]
 	struct Question<'a>{
@@ -14,6 +15,9 @@ pub fn run(){
 				answer:ans
 			}
 		}
+		//  fn options_list(&'static self){
+		// 	println!("{:?}","asdf" );
+		// }
 	};
 
 	let questions:Vec<Question>=vec![
@@ -33,12 +37,29 @@ pub fn run(){
 		)
 
 	];
+	println!("..............Quiz Game................");
+	static mut num:i8=4;
 	fn quiz(questions:Vec<Question>){
-		let index=rand::thread_rng().gen_range(0,questions.len()) as usize;
-		let question=questions[index];
-		println!("{:?}",questions[index].question);
-
-		println!("{:?}",questions[index].options );
+		unsafe {num-=1};
+		 if num <0 {
+			println!("{:?}","The score is 4" )
+		}
+	
+		let mut input=String::new();
+		let index=rand::thread_rng()
+		.gen_range(0,questions.len()) as usize;
+		let question=&questions[index];
+		println!("{}",questions[index].question);
+		for i in 0..question.options.len() as usize{
+			println!(" {}: {}",i,question.options[i]);
+		}
+		std::io::stdin()
+			.read_line(&mut input)
+			.expect("Invalid Input");
+		let input:u8=input.trim().parse().expect("Not a number");
+		println!("{:?}",input );
+		quiz(questions)
 	}
+
 	quiz(questions);
 }
