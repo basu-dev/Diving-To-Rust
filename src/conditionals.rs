@@ -8,12 +8,14 @@ pub fn run(){
         println!("{} is greater than 10", a);
     }
     let mut i=0;
+    //like do while
     loop {
         println!("From loop if loop {}", i);
         i+=1;
         if i>9 { break;}
     }
     let mut j=0;
+    //similar to while loop
     while j<9{
         println!("From while loop {}",j );
         j+=1;
@@ -42,5 +44,11 @@ pub fn run(){
         }
     }
     check(Coins::Penny);
+
     check_str("Basu");
-}
+    let a=[1,3,4,5];
+    for i in a.iter(){
+        println!("{:?}",i*i );
+    }
+    println!("{:?} a", a);
+    }

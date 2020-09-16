@@ -52,9 +52,9 @@ pub fn run(){
     let lst=vec!["Name"];
     let res=names.push("Jane");
     println!("{:?} , {:?} {:?}",_vec, names, res);
-    //if types not defined it uses default type
-    //for eg.. let a=8; uses default let a:i32=8;
-
+    for pat in names.iter_mut() {
+        println!("{:?}",pat );
+    }
 
     
 

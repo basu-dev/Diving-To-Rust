@@ -1,3 +1,4 @@
+#[allow(unused)]
 mod print;
 mod vars;
 mod datatypes;
@@ -5,6 +6,7 @@ mod function;
 mod structs;
 mod conditionals;
 mod cli;
+mod pointer;
 fn main(){
     // print::print();
     // vars::vars();
@@ -12,6 +14,7 @@ fn main(){
     // function::run();
     // structs::run();
     // conditionals::run();
-    cli::run();
+    pointer::run();
+    // cli::run();
 
 }
