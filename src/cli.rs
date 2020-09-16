@@ -4,10 +4,8 @@ use rand::Rng;
 use std::cmp::Ordering;
 pub fn run(){
    let args:Vec<String>=args().collect();
-
    println!("{:?}",args );
-
-    println!("{}","Guessing Game" );
+    println!("{}","Guessing Game");
     println!("{}","Take a guess" );
     let mut guess=String::new();
     let random_number=rand::thread_rng().gen_range(1,100);
@@ -20,7 +18,6 @@ pub fn run(){
             Ordering::Greater => println!("Decrease"),
             Ordering::Equal=>println!("correct")
         }
-
     }
     let guess:u8=guess.trim().parse().expect("It is not a number");
     guess_result(guess,random_number);
