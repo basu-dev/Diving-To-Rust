@@ -42,11 +42,42 @@ pub fn run(){
 					["1,47,181","2,57,181","1,78,181","2,54,541"],
 					"1,47,181"
 			),
+		Question::new(
+					"Who is the inventer of Facebook?",
+					["Mark Zuckerberg","John Doe","Evan You","Bill Gates"],
+					"Mark Zuckerberg"
+			),
+		Question::new(
+					"'How you doin'?' catchphrase belongs to which character in famous TV Show 'Friends'",
+					["Joey Tribbiani","Phoebe Buffay","Chandler Bing","Rachel Green"],
+					"Joey Tribbiani"
+			),
+		Question::new(
+					"Who was the ruler of Germany during World War II?",
+					["Nepolean Bonaparte","Adolf Hitler","Joseph Stalin","Winston Churchill"],
+					"Adolf Hitler"
+			),
+		Question::new(
+					"Who is the inventor of Telephone?",
+					["Graham Bell","Bill Gates","Galileo Galille","Albert Einstein"],
+					"Graham Bell"
+			),
+		Question::new(
+					"Which band does the song 'Hey Jude!' belongs to?",
+					["Pink Floyd","Eagles","Queen","The Beatles"],
+					"The Beatles"
+			)
+
 	];
 	println!("\n================ Quiz Mania =============\n");
 	static mut NUM:i8=4;
 	static mut SCORE: u8 = 0;
 	let mut used_indices:Vec<String>=vec![];
+	fn get_index(len:usize)->usize{
+		let index=rand::thread_rng()
+			.gen_range(0,len) as usize;
+			index
+	}
 	fn quiz(quests:Vec<Question>,mut used_indices:Vec<String>){
 		let mut questions:Vec<Question>=quests.clone();
 		unsafe {NUM-=1};
@@ -55,8 +86,16 @@ pub fn run(){
 		 	terminate=true;
 			}
 		}
-		let index=rand::thread_rng()
-			.gen_range(0,questions.len()) as usize;
+		let mut index:usize=0;
+		loop{
+			 index=get_index(questions.len());
+			if(used_indices.contains(&index.to_string())){
+				continue
+			}
+			else {
+				break;
+			}
+		}
 		let question=&questions[index];
 		println!("{}",questions[index].question);
 		used_indices.push(index.clone().to_string());
@@ -71,14 +110,18 @@ pub fn run(){
 			println!("\n================ Game Over =================\n" );
 			unsafe{println!("           YOUR SCORE IS {} / 4", SCORE );};
 			// println!("\n======== The Correct Answers Are ========\n");
-			println!("Do you want to play again?(y/N)");
+			println!("\nDo you want to play again?(y/N)");
 			let mut play=String::new();
 			unsafe {
 				io::stdin().read_line(&mut play).expect("Error");
-				println!("{:?}",&play );
 				if play.trim() == "y".to_string() || play.trim() == "Y"{
 					unsafe{NUM=4};
+					used_indices=vec![];
+					SCORE=0;
 					quiz(quests,used_indices);
+				}
+				else {
+					println!("\n=============== Quitting Game ==============");
 				}
 			}
 		}
