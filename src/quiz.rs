@@ -1,7 +1,7 @@
 use rand::Rng;
 use std::io;
 pub fn run(){
-	#[derive(Debug)]
+	#[derive(Debug,Clone)]
 	struct Question<'a>{
 		question:&'a str,
 		options:[&'a str;4],
@@ -15,37 +15,46 @@ pub fn run(){
 				answer:ans
 			}
 		}
-		//  fn options_list(&'static self){
-		// 	println!("{:?}","asdf" );
-		// }
 	};
 
 	let questions:Vec<Question>=vec![
-		Question::new("What is the capital city of Nepal?",
+		Question::new(
+					"What is the capital city of Nepal?",
 					["Pokhara","Kathmandu","Dharan","Lalitpur"],
 					"Kathmandu"
-						),
+		),
 		Question::new(
-					"Who is the first Prime Minister of Nepal",
+					"Who is the first Prime Minister of Nepal ?",
 					["Gagan Thapa","Matrika Koirala","Bhimsen Thapa","Jung Bahadur Rana"],
 					"Bhimsen Thapa"
 		),
 		Question::new(
 					"Who is the captain of Nepali Cricket Team?",
 					["Gyanendra Malla","Paras Khadka","Sagar Thapa","Sandeep Lamichhane"],
-					"Sandeep Lamichhane"
-		)
+					"Gyanendra Malla"
+		),
+		Question::new(
+					"Who is the current President of USA?",
+					["Barack Obama","Donald Trumph","John F. Kennedy","Vladimir Putin"],
+					"Donald Trumph"
+			),
+		Question::new(
+					"What is the area of Nepal in kilometer square?",
+					["1,47,181","2,57,181","1,78,181","2,54,541"],
+					"1,47,181"
+			),
+
 
 	];
-	println!("================ Quiz Game =============");
-	static mut num:i8=4;
-	static mut score: u8 = 0;
+	let mut questions_copy:Vec<Question>=questions.clone();
+	println!("\n================ Quiz Game =============\n");
+	static mut NUM:i8=4;
+	static mut SCORE: u8 = 0;
 	fn quiz(questions:Vec<Question>){
-		unsafe {num-=1};
+		unsafe {NUM-=1};
 		let mut terminate=false;
-		 unsafe {if num <1 {
+		 unsafe {if NUM <1 {
 		 	terminate=true;
-			// println!("{:?}","The score is 4" )
 		}
 	}
 		let mut input=String::new();
@@ -61,19 +70,16 @@ pub fn run(){
 			.expect("Invalid Input");
 		let input:usize=input.trim().parse().expect("Not a number");
 		if question.options[input - 1]==question.answer{
-			unsafe {score+=1}
+			unsafe {SCORE+=1}
 		}
 		if terminate{
-			// quiz(questions)
-			println!("=============== Game Over ===============" );
-			unsafe{println!("              The score is {}", score );};
-			println!("=========The Correct Answers Are=========");
-
-
+			println!("\n=============== Game Over ===============\n" );
+			unsafe{println!("              YOUR SCORE IS {} / 4", SCORE );};
+			// println!("\n======== The Correct Answers Are ========\n");
 		}
 		else {
 			quiz(questions)
 		}
 	}
-	quiz(questions);
+	quiz(questions_copy);
 }

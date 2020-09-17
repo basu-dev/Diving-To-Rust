@@ -7,7 +7,8 @@
 // mod conditionals;
 // mod cli;
 // mod pointer;
-mod quiz;
+// mod quiz;
+mod file_handling;
 // use std::env::args;
 fn main(){
 	// let args:Vec<String>=args().collect();
@@ -20,6 +21,6 @@ fn main(){
     // conditionals::run();
     // pointer::run();
     // cli::run();
-    quiz::run()
-
+    // quiz::run()
+    file_handling::run();
 }
