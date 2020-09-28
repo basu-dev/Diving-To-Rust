@@ -34,7 +34,7 @@ pub fn run(){
 		),
 		Question::new(
 					"Who is the current President of USA?",
-					["Barack Obama","Donald Trumph","John F. Kennedy","Vladimir Putin"],
+					["Barack Obama","Vladimir Putin","John F. Kennedy","Donald Trumph"],
 					"Donald Trumph"
 			),
 		Question::new(
@@ -44,22 +44,22 @@ pub fn run(){
 			),
 		Question::new(
 					"Who is the inventer of Facebook?",
-					["Mark Zuckerberg","John Doe","Evan You","Bill Gates"],
+					["Evan You","John Doe","Mark Zuckerberg","Bill Gates"],
 					"Mark Zuckerberg"
 			),
 		Question::new(
-					"'How you doin'?' catchphrase belongs to which character in famous TV Show 'Friends'",
+					"'How you doin'?' catchphrase belongs to which character in famous TV Show 'Friends'?",
 					["Joey Tribbiani","Phoebe Buffay","Chandler Bing","Rachel Green"],
 					"Joey Tribbiani"
 			),
 		Question::new(
 					"Who was the ruler of Germany during World War II?",
-					["Nepolean Bonaparte","Adolf Hitler","Joseph Stalin","Winston Churchill"],
+					["Nepolean Bonaparte","Winston Churchill","Joseph Stalin","Adolf Hitler"],
 					"Adolf Hitler"
 			),
 		Question::new(
 					"Who is the inventor of Telephone?",
-					["Graham Bell","Bill Gates","Galileo Galille","Albert Einstein"],
+					["Galileo Galille","Bill Gates","Graham Bell","Albert Einstein"],
 					"Graham Bell"
 			),
 		Question::new(
@@ -69,7 +69,7 @@ pub fn run(){
 			)
 
 	];
-	println!("\n================ Quiz Mania =============\n");
+	println!("\n================ Quiz Mania =============");
 	static mut NUM:i8=4;
 	static mut SCORE: u8 = 0;
 	let mut used_indices:Vec<String>=vec![];
@@ -97,7 +97,7 @@ pub fn run(){
 			}
 		}
 		let question=&questions[index];
-		println!("{}",questions[index].question);
+		println!("\n {}",questions[index].question);
 		used_indices.push(index.clone().to_string());
 		for i in 0..question.options.len() as usize{
 			println!(" {}: {}",i + 1,question.options[i]);

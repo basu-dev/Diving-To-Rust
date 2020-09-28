@@ -22,8 +22,9 @@ pub fn run(){
 	};
 	//open file
 	let mut file= match File::open(&path) {
-		Err(e) => panic!("{:?}",e ),
-		Ok(result) => result
+		 Err(e) => panic!("{:?}",e ),
+		 Ok(result) => result	
+
 	};
 	//read from file
 	let mut content=String::new();

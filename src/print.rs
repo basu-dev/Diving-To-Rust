@@ -11,5 +11,15 @@ pub fn print(){
 
     println!("My name is {name}. I am {age} years old.",name="Basu",age=32 );
     // debug traits
+    #[derive(Debug)]
+    struct Person{
+    	name:String,
+    	age:u8
+    }
+    let person=Person{
+    	name:"Dev".to_string(),
+    	age:32
+    };
+    println!("{:#?}",person );
     println!("Data is{:?}",("Nice",29,true))
 }
