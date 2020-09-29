@@ -13,7 +13,8 @@ mod print;
 // mod test;
 // mod file_handling;
 // use std::env::args;
-    mod image;
+    // mod image;
+    mod ownerandburrow;
 fn main(){
 	// let args:Vec<String>=args().collect();
 	// println!("{:?}",args );
@@ -28,6 +29,7 @@ fn main(){
     // quiz::run();
     // test::run();
     // file_handling::run();
-    image::run();
+    // image::run();
+    ownerandburrow::run();
 
 }
