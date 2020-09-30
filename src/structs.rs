@@ -7,7 +7,7 @@ struct Person{
     age:u8
 };
 //named structs
-let a= Person{
+let _a= Person{
     age:34,
     address:"Kapan".to_string(),
     name:"Basu".to_string()
@@ -39,4 +39,33 @@ impl Person{
 let mut b=Person::new("Cat","Catmandu",23);
 b.update_age(32);
 b.full_statement();
+
+    #[derive(Debug)]
+    struct Rectangle{
+        length:u8,
+        breadth:u8
+    }
+    impl Rectangle{
+        fn new(length:u8,breadth:u8)->Rectangle{
+            Rectangle{
+                length:length,
+                breadth:breadth
+            }
+        }
+        fn square(length:u8)->Rectangle{
+            Rectangle{
+                length,
+                breadth:length
+            }
+        }
+        fn area(&self)->u8{
+            &self.length *&self.breadth
+        }
+    }
+
+    let rect=Rectangle::new(32,32);
+    println!("{:#?}",rect);
+    let sqr=Rectangle::square(2);
+    println!("{:#?},area: {}",sqr,sqr.area());
+
 }
