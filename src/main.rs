@@ -5,7 +5,7 @@ mod print;
 // mod vars;
 // mod datatypes;
 // mod function;
-mod structs;
+// mod structs;
 // mod conditionals;
 // mod cli;
 // mod pointer;
@@ -13,8 +13,9 @@ mod structs;
 // mod test;
 // mod file_handling;
 // use std::env::args;
-    // mod image;
-    // mod ownerandburrow;
+// mod image;
+// mod ownerandburrow;
+mod random_number;
 fn main(){
 	// let args:Vec<String>=args().collect();
 	// println!("{:?}",args );
@@ -22,7 +23,7 @@ fn main(){
     // vars::vars();
     // datatypes::run();
     // function::run();
-    structs::run();
+    // structs::run();
     // conditionals::run();
     // pointer::run();
     // cli::run();
@@ -31,5 +32,6 @@ fn main(){
     // file_handling::run();
     // image::run();
     // ownerandburrow::run();
+    random_number::run();
 
 }

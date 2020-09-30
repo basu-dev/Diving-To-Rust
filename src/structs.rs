@@ -67,5 +67,21 @@ b.full_statement();
     println!("{:#?}",rect);
     let sqr=Rectangle::square(2);
     println!("{:#?},area: {}",sqr,sqr.area());
+    
+    #[derive(Debug)]
+    struct Cube{
+        length:u32,
+        breadth:u32,
+        height:u32
+    }
+    impl Cube{
+        fn new(length:u32,breadth:u32,height:u32)->Cube{
+            Cube{
+                length,breadth,height
+            }
+        }
+    }
+    let cub=Cube::new(1,3,4);
+    println!("{:#?}",cub)
 
 }
