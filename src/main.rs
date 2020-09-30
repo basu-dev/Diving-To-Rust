@@ -15,7 +15,9 @@ mod print;
 // use std::env::args;
 // mod image;
 // mod ownerandburrow;
-mod random_number;
+// mod random_number;
+// mod enums;
+mod path_modules;
 fn main(){
 	// let args:Vec<String>=args().collect();
 	// println!("{:?}",args );
@@ -32,6 +34,8 @@ fn main(){
     // file_handling::run();
     // image::run();
     // ownerandburrow::run();
-    random_number::run();
+    // random_number::run();
+    // enums::run();
+    path_modules::run();
 
 }

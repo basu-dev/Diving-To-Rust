@@ -89,7 +89,7 @@ pub fn run(){
 		let mut index:usize=0;
 		loop{
 			 index=get_index(questions.len());
-			if(used_indices.contains(&index.to_string())){
+			if used_indices.contains(&index.to_string()) {
 				continue
 			}
 			else {
