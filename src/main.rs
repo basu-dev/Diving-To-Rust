@@ -13,11 +13,11 @@ mod print;
 // mod test;
 // mod file_handling;
 // use std::env::args;
-// mod image;
+mod img;
 // mod ownerandburrow;
 // mod random_number;
 // mod enums;
-mod path_modules;
+// mod path_modules;
 fn main(){
 	// let args:Vec<String>=args().collect();
 	// println!("{:?}",args );
@@ -32,10 +32,10 @@ fn main(){
     // quiz::run();
     // test::run();
     // file_handling::run();
-    // image::run();
+    img::run();
     // ownerandburrow::run();
     // random_number::run();
     // enums::run();
-    path_modules::run();
+    // path_modules::run();
 
 }
