@@ -19,10 +19,10 @@ pub mod Education{
                 grade
             }
         }
-        pub fn get_by_id(students:&Vec<&Student>,id:Uuid)->Option<Student>{
+        pub fn get_by_id(students:&Vec<&Student>,id:Uuid)->Option<usize>{
             for (i,&student) in students.iter().enumerate(){
                 if student.id==id {
-                    return Some(student)
+                    return Some(i)
                 }
             }
             None

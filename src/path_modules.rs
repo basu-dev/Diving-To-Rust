@@ -14,11 +14,10 @@ pub fn run(){
     students=vec![&first_std,&second_std,&third_std];
     let principal=Employee::new(String::from(" Pushpa Pradhan"),Position::Principal(3200));
     employees=vec![&principal];
-    let a=Student::get_by_id(&students,second_std.id);
-
-println!("{:#?}",a);
-
-    // println!("{:#?}",&employees);
-
-    // println!("{:#?}",&students);
+    let mut a= Student::get_by_id(&students,first_std.id);
+    let emp:Option<&Student>=match a{
+        None=>None,
+        Some(x)=>Some(&students[x])
+    };
+println!("{:#?}",emp.unwrap());
 }
