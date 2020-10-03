@@ -50,5 +50,14 @@ pub fn run(){
     println!("{:?}",y );
     println!("{:?}",add_one(None) );
     // println!("{:?}",add_five(Some(3)) );
-    
+    //enums can be used to insert values of different types on vector or array
+        #[derive(Debug)]
+    enum CustomTypes{
+        St(String),
+        Int32(u32),
+        Float(f64)
+    }
+    let vector=vec![CustomTypes::St("abc".to_string()),CustomTypes::Int32(32),CustomTypes::Float(53.34)];
+    println!("{:#?}",&vector);
+
 }
