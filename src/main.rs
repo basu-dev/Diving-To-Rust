@@ -20,6 +20,7 @@ mod print;
 // mod enums;
 mod string;
 // mod path_modules;
+mod scope_and_shodowing;
 fn main(){
 	// let args:Vec<String>=args().collect();
 	// println!("{:?}",args );
@@ -38,7 +39,8 @@ fn main(){
     // ownerandburrow::run();
     // random_number::run();
     // enums::run();
-    string::run();
+    // string::run();
     // path_modules::run();
+    scope_and_shodowing::run();
 
 }
