@@ -43,7 +43,7 @@ pub fn run(){
 					"1,47,181"
 			),
 		Question::new(
-					"Who won the UEFA Championns League 2020?",
+					"Who won the UEFA Championship 2020?",
 					["Bayern Munchen","Paris Saint German","RB Leipeig","Barcelona"],
 					"Bayern Munchen"
 		),
@@ -71,7 +71,12 @@ pub fn run(){
 					"Which band does the song 'Hey Jude!' belongs to?",
 					["Pink Floyd","Eagles","Queen","The Beatles"],
 					"The Beatles"
-			)
+			),
+		Question::new(
+			"What command activates Google Assistant?",
+			["Hey Siri","Hello Google","Alexa","Ok Google"],
+			"Ok Google"
+		)
 
 	];
 	println!("\n================ Quiz Mania =============");
