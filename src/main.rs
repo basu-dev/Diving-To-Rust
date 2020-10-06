@@ -9,7 +9,7 @@ mod print;
 // mod conditionals;
 // mod cli;
 // mod pointer;
-// mod quiz;
+mod quiz;
 // mod test;
 // mod file_handling;
 // use std::env::args;
@@ -18,9 +18,9 @@ mod print;
 // mod ownerandburrow;
 // mod random_number;
 // mod enums;
-mod string;
+// mod string;
 // mod path_modules;
-mod scope_and_shodowing;
+// mod scope_and_shodowing;
 fn main(){
 	// let args:Vec<String>=args().collect();
 	// println!("{:?}",args );
@@ -32,7 +32,7 @@ fn main(){
     // conditionals::run();
     // pointer::run();
     // cli::run();
-    // quiz::run();
+    quiz::run();
     // test::run();
     // file_handling::run();
     // img::run();
@@ -41,6 +41,6 @@ fn main(){
     // enums::run();
     // string::run();
     // path_modules::run();
-    scope_and_shodowing::run();
+    // scope_and_shodowing::run();
 
 }

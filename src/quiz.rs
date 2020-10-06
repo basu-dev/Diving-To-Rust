@@ -43,6 +43,11 @@ pub fn run(){
 					"1,47,181"
 			),
 		Question::new(
+					"Who won the UEFA Championns League 2020?",
+					["Bayern Munchen","Paris Saint German","RB Leipeig","Barcelona"],
+					"Bayern Munchen"
+		),
+		Question::new(
 					"Who is the inventer of Facebook?",
 					["Evan You","John Doe","Mark Zuckerberg","Bill Gates"],
 					"Mark Zuckerberg"

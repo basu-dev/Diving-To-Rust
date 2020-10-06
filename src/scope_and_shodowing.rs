@@ -20,5 +20,4 @@ pub fn run(){
         println!(" From Closure x is {}",x );
     };
     closure();
-    //Now i just neet a commit so ..thats it.. sorry
 }
