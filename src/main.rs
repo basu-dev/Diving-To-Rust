@@ -21,6 +21,7 @@ mod quiz;
 // mod string;
 // mod path_modules;
 // mod scope_and_shodowing;
+mod generics;
 fn main(){
 	// let args:Vec<String>=args().collect();
 	// println!("{:?}",args );
@@ -32,7 +33,7 @@ fn main(){
     // conditionals::run();
     // pointer::run();
     // cli::run();
-    quiz::run();
+    // quiz::run();
     // test::run();
     // file_handling::run();
     // img::run();
@@ -42,5 +43,6 @@ fn main(){
     // string::run();
     // path_modules::run();
     // scope_and_shodowing::run();
+    generics::run();
 
 }
