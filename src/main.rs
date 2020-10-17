@@ -9,7 +9,7 @@ mod print;
 // mod conditionals;
 // mod cli;
 // mod pointer;
-mod quiz;
+// mod quiz;
 // mod test;
 // mod file_handling;
 // use std::env::args;
