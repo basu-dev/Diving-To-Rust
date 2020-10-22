@@ -22,7 +22,8 @@ mod print;
 // mod path_modules;
 // mod scope_and_shodowing;
 // mod generics;
-mod traits;
+// mod traits;
+mod lib;
 fn main(){
 	// let args:Vec<String>=args().collect();
 	// println!("{:?}",args );
@@ -45,6 +46,7 @@ fn main(){
     // path_modules::run();
     // scope_and_shodowing::run();
     // generics::run();
-    traits::run();
+    // traits::run();
+    lib::calculate(32,44);
 
 }
