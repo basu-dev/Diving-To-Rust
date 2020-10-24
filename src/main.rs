@@ -16,14 +16,14 @@ mod print;
 // #[path="./images/main.rs"]
 // mod img;
 // mod ownerandburrow;
-// mod random_number;
+mod random_number;
 // mod enums;
 // mod string;
 // mod path_modules;
 // mod scope_and_shodowing;
 // mod generics;
 // mod traits;
-mod lib;
+// mod lib;
 fn main(){
 	// let args:Vec<String>=args().collect();
 	// println!("{:?}",args );
@@ -40,13 +40,13 @@ fn main(){
     // file_handling::run();
     // img::run();
     // ownerandburrow::run();
-    // random_number::run();
+    random_number::run();
     // enums::run();
     // string::run();
     // path_modules::run();
     // scope_and_shodowing::run();
     // generics::run();
     // traits::run();
-    lib::calculate(32,44);
+    // lib::calculate(32,44);
 
 }
